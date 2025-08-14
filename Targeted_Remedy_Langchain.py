@@ -46,10 +46,14 @@ with st.expander("💡 Tips for better results"):
 #region st2 — Handle button click to trigger remedy search
 if st.button("Find"):
     with st.spinner("Loading..."):
-        # `find_remedy` handles the LangChain + vector search logic internally
+        # LangChain + vector search logic internally
         result = find_remedy(ailment_description, sel_remedy_type, sel_body_type)
+
+        if "No remedy found" in result:
+           result += ("\n\nTip: Switch to the 'Adaptive Remedy (LangGraph)' page for broader, more flexible results." 
+                       "\n\n Or adjust your filters: select 'General' body type, and for remedies, you can explore other types like dietary/nutritional changes, herbal/ayurvedic remedies, etc. or switch to 'overall'.")
+
         st.text_area("Remedy", result, height=400)
-#endregion
 
 #region st Body Type Desc — navigation hint
 st.markdown(
