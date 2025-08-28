@@ -1,7 +1,7 @@
 # 🍀 Health Guru AI — Ayurvedic Remedies Assistant
 
 **Live Demo:** [healthguru.live](http://3.208.253.130:8501/)  
-**Video:** [YouTube link]  
+**Video:** https://www.youtube.com/watch?v=PI4PqpCxAyg  
 **Tech Stack:** Streamlit • LangChain • LangGraph • FAISS • OpenAI
 
 Health Guru AI is a dual-mode Ayurvedic remedy assistant that combines **LangChain-powered targeted search** with **LangGraph-powered adaptive retrieval**.  
